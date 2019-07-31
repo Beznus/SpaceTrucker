@@ -2,10 +2,10 @@
   <v-app>
     <v-app-bar app>
       <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
+        <span class="font-weight-light"><router-link class="app-bar-link" :to="{ name: 'home', params: {} }">Space Trucker</router-link></span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
+      <v-btn to="hangar" text small>Hangar</v-btn>
       <div v-if="userId" class="ml1 pointer black" @click="logout()">logout</div>
       <router-link v-else to="/login" class="ml1 no-underline black">login</router-link>
       <v-btn
@@ -49,3 +49,9 @@ export default {
   }
 };
 </script>
+
+<style>
+.app-bar-link {
+  text-decoration: none;
+}
+</style>

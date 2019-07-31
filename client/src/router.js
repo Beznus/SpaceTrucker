@@ -1,7 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
-import AppLogin from "./components/AppLogin.vue"
+import AppLogin from "./components/AppLogin.vue";
+import Hangar from "./views/Hangar.vue";
 
 Vue.use(Router);
 
@@ -26,6 +27,11 @@ export default new Router({
     {
       path: "/login",
       component: AppLogin
+    },
+    {
+      path: "/hangar",
+      component: Hangar,
+      name: "hangar"
     }
   ]
 });
